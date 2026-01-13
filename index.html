@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Banking webapp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="block">
+    <h1>Transactiegeschiedenis</h1>
+
+    <div class="filters">
+
+        <div class="filtergroup">
+            <label for="filtertype">Filter op:</label>
+            <select id="filtertype">
+                <option value="alle">Alles</option>
+                <option value="inkomend">Inkomend</option>
+                <option value="uitgaand">Uitgaand</option>
+            </select>
+        </div>
+
+        <div class="filtergroup">
+            <label for="filterdate">Datum:</label>
+            <input type="date" id="filterdate">
+        </div>
+
+        <button onclick="filterTransactions()" class="buttonfilter">Filter</button>
+        <button onclick="resetFilters()" class="buttonreset">Reset</button>
+
+    </div>
+
+    <div id="transaction-list"></div>
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
